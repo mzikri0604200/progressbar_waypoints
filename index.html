@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- In header -->
+  <link rel="stylesheet" href="LineProgressbar-master/jquery.lineProgressbar.css" />
+</head>
+<body>
+  <section style="height: 100vh; background-color: blueviolet;">
+
+  </section>
+
+  <section id="test1" style="height: 100vh; background-color: darkcyan;">
+
+  </section>
+
+  <section style="height: 100vh; background-color: salmon;">
+    <h4 style="margin-bottom: 0">#demoprogressbar5</h4>
+    <div id="demoprogressbar5">
+      <div class="progressbar" style="width: 100%; background-color: rgb(238, 238, 238); border-radius: 0px;">
+        <div class="proggress" style="background-color: rgb(26, 188, 156); height: 10px; border-radius: 0px; width: 49%;"></div>
+      <div class="percentCount">49%</div></div>
+    </div>
+    
+  </section>
+
+  <section style="height: 100vh; background-color: aquamarine;">
+
+  </section>
+
+  <!-- In footer -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+  <script src="LineProgressbar-master/jquery.lineProgressbar.js"></script>
+  <script>
+
+    
+    var waypoint = new Waypoint({
+      element: document.getElementById('test1'),
+      handler: function(direction) {
+        console.log('Scrolled to waypoint!')
+
+        $('#demoprogressbar5').LineProgressbar({
+          percentage: 25,
+          fillBackgroundColor: '#e67e22'
+        });
+      }
+    })
+  </script>
+</body>
+</html>
